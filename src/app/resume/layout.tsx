@@ -1,4 +1,3 @@
-import Navbar from "@/components/navbar";
 import React from "react";
 
 export default function layout({
@@ -8,7 +7,6 @@ export default function layout({
 }>) {
   return (
     <div className="bg-green-100">
-      {/* <Navbar /> */}
       <> {children}</>
     </div>
   );
