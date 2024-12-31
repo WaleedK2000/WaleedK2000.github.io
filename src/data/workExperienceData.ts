@@ -1,4 +1,13 @@
-export const workExperienceData = [
+export interface WorkExperienceItemInterface {
+  position_title: string;
+  company_name: string;
+  location: string;
+  start_date: string;
+  end_date: string;
+  responsibilities: string[];
+}
+
+export const workExperienceData: WorkExperienceItemInterface[] = [
   {
     position_title: "Full-Stack Engineer",
     company_name: "Codeaza Technologies",
@@ -25,7 +34,7 @@ export const workExperienceData = [
       "Developed and optimized high-quality, testable, and reusable code for React applications.",
       "Improved user experience and performance by implementing responsive design and optimization techniques.",
       "Collaborated with team members to design and implement solutions to fulfill customer needs.",
-      "Improved responsiveness by about 60% using breakpoints and mobile first approach.",
+      "Improved website responsiveness by about 60% using breakpoints and mobile first approach.",
     ],
   },
 ];
