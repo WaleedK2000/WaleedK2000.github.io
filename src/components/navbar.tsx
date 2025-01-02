@@ -10,7 +10,7 @@ export default function navbar() {
         <h2>W.K</h2>
       </div>
       <div className="flex flex-row  ">
-        <div className="my-auto  flex flex-row list-none gap-10 text-primary_text_color  ">
+        <ul className="my-auto  flex flex-row list-none gap-10 text-primary_text_color  ">
           <li className="">
             <Link href={"/home"}>Home</Link>
           </li>
@@ -19,7 +19,7 @@ export default function navbar() {
           </li>
           <li>Project Portfolio</li>
           <li>Magic Moments</li>
-        </div>
+        </ul>
       </div>
       <div className="my-auto">
         <button className="bg-green-200">Dark Mode</button>
