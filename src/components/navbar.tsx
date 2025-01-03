@@ -12,7 +12,7 @@ export default function navbar() {
       <div className="flex flex-row  ">
         <div className="my-auto  flex flex-row list-none gap-10 text-primary_text_color  ">
           <Link href={"/home"} passHref={true} key={"home"}>
-            <a>{"Home"}</a>
+            {"Home"}
           </Link>
 
           <Link href={"/resume"}>Resume</Link>

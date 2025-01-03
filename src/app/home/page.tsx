@@ -1,44 +1,67 @@
 "use client";
 
+import Link from "next/dist/client/link";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center  h-[90vh]  ">
-      <div className="  flex flex-row justify-center">
-        <div className="flex flex-col md:flex-row gap-10 justify-center mx-5">
-          <div className="flex  flex-col gap-10 md:w-2/5  my-auto ">
-            <div className="flex flex-col gap-4 justify-center ">
-              <div className="flex flex-row  justify-center">
-                <h1>Software Engineer</h1>
-              </div>
-              <div className="flex flex-row  justify-center">
-                <h1>Waleed Khalid Kayani</h1>
-              </div>
-            </div>
-            <div>
-              <p className="text-primary_text_color">
-                I am a software engineer with a passion for building software
-                that solves real-world problems. I am a full-stack developer
-                with experience in building web applications using React, Node,
-                and Express. I am also experienced in building mobile
-                applications using React Native.
-              </p>
-            </div>
-          </div>
+    <>
+      <div className="nav-bar-panel  ">
+        <div className="my-auto">
+          <h2>W.K</h2>
+        </div>
+        <div className="flex flex-row  ">
+          <div className="my-auto  flex flex-row list-none gap-10 text-primary_text_color  ">
+            <Link href={"/home"} passHref={true} key={"home"}>
+              {"Home"}
+            </Link>
 
-          <div className="">
-            <Image
-              src="/template.png"
-              alt="Next.js logo"
-              width={600}
-              height={5000}
-              priority
-            />
+            <Link href={"/resume"}>Resume</Link>
+
+            {/* <li>Project Portfolio</li>
+          <li>Magic Moments</li> */}
+          </div>
+        </div>
+        <div className="my-auto">
+          <button className="bg-green-200">Dark Mode</button>
+        </div>
+      </div>
+      <div className="flex flex-col justify-center  h-[90vh]  ">
+        <div className="  flex flex-row justify-center">
+          <div className="flex flex-col md:flex-row gap-10 justify-center mx-5">
+            <div className="flex  flex-col gap-10 md:w-2/5  my-auto ">
+              <div className="flex flex-col gap-4 justify-center ">
+                <div className="flex flex-row  justify-center">
+                  <h1>Software Engineer</h1>
+                </div>
+                <div className="flex flex-row  justify-center">
+                  <h1>Waleed Khalid Kayani</h1>
+                </div>
+              </div>
+              <div>
+                <p className="text-primary_text_color">
+                  I am a software engineer with a passion for building software
+                  that solves real-world problems. I am a full-stack developer
+                  with experience in building web applications using React,
+                  Node, and Express. I am also experienced in building mobile
+                  applications using React Native.
+                </p>
+              </div>
+            </div>
+
+            <div className="">
+              <Image
+                src="/template.png"
+                alt="Next.js logo"
+                width={600}
+                height={5000}
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 
   // return (
