@@ -8,8 +8,8 @@ export default function layout({
 }>) {
   return (
     <div className="bg-green-100">
-      <Navbar />
       <> {children}</>
+      <Navbar />
     </div>
   );
 }
