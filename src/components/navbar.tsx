@@ -14,8 +14,21 @@ export default function Navbar() {
       </div>
       <div className="flex flex-row  ">
         <ul className="my-auto  flex flex-row list-none gap-10 text-primary_text_color  ">
-          <li onClick={() => router.push("/home")}>Home</li>
-          <li onClick={() => router.push("/resume")}>Resume</li>
+          <li
+            className="hover:cursor-pointer"
+            onClick={() => {
+              console.log("hmmmm ");
+              router.push("/home");
+            }}
+          >
+            Home
+          </li>
+          <li
+            className="hover:cursor-pointer"
+            onClick={() => router.push("/resume")}
+          >
+            Resume
+          </li>
 
           {/* <li>Project Portfolio</li>
           <li>Magic Moments</li> */}
