@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "@/components/navbar";
 
 export default function layout({
   children,
@@ -7,7 +8,7 @@ export default function layout({
 }>) {
   return (
     <div className="bg-green-100">
-      {/* <Navbar /> */}
+      <Navbar />
       <> {children}</>
     </div>
   );
