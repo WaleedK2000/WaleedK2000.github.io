@@ -7,9 +7,9 @@ export default function layout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="bg-green-100 h-screen ">
+    <>
       <Navbar />
       {children}
-    </div>
+    </>
   );
 }
