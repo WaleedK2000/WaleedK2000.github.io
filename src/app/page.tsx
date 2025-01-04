@@ -26,13 +26,13 @@ export default function Home() {
           </div>
 
           <div>
-            <Image
+            {/* <Image
               src="/template.png"
               alt="Next.js logo"
               width={600}
               height={5000}
               priority
-            />
+            /> */}
           </div>
         </div>
       </div>
