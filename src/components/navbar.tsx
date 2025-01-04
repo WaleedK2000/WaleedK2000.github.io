@@ -8,7 +8,7 @@ export default function Navbar() {
   const router = useRouter();
 
   return (
-    <div className="nav-bar-panel  ">
+    <nav className="h-[10vh] flex flex-row justify-between  ">
       <div className="my-auto">
         <h2>W.K</h2>
       </div>
@@ -37,6 +37,6 @@ export default function Navbar() {
       <div className="my-auto">
         <button className="bg-green-200">Dark Mode</button>
       </div>
-    </div>
+    </nav>
   );
 }
