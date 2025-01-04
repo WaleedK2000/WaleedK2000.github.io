@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center  min-h-screen ">
-      <div className="  flex flex-row justify-center">
+    <div className="flex flex-col justify-center   ">
+      <div className="  flex flex-row justify-center  my-auto ">
         <div className="flex flex-col md:flex-row gap-10 justify-center mx-5">
           <div className="flex  flex-col gap-4 md:w-2/5  my-auto">
             <div className="flex flex-col gap-5 justify-center ">
