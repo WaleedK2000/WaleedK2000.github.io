@@ -29,7 +29,7 @@ export default function Home() {
 
           <div className="">
             <Image
-              src="./template.png"
+              src="next.svg"
               alt="Next.js logo"
               width={600}
               height={500}
