@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="flex flex-col justify-center  h-[90vh]  ">
@@ -27,7 +29,7 @@ export default function Home() {
 
           <div className="">
             <Image
-              src="/template.png"
+              src="./template.png"
               alt="Next.js logo"
               width={600}
               height={500}
