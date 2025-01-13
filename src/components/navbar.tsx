@@ -17,7 +17,7 @@ export default function Navbar() {
         "  md:w-full  h-full md:h-[10vh] flex md:flex-row md:justify-between  fixed top-0 bg-primary_text_color md:bg-green-200 text-white text-primary_text_color px-10 py-2 z-10",
         {
           "h-full w-[60vw] flex-col ": navbarOpen,
-          "h-[10vh] w-full flex-row justify-between ": !navbarOpen,
+          "h-40 w-full flex-row justify-between ": !navbarOpen,
         }
       )}
     >
