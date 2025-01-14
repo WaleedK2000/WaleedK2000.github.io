@@ -2,9 +2,11 @@
 
 import React, { useState } from "react";
 
+import clsx from "clsx";
 import { useRouter } from "next/navigation";
 
-import clsx from "clsx";
+import { IoMdMenu } from "react-icons/io";
+import { RiMenuFoldFill } from "react-icons/ri";
 
 export default function Navbar() {
   const router = useRouter();
@@ -14,22 +16,27 @@ export default function Navbar() {
   return (
     <nav
       className={clsx(
-        "  md:w-full  h-full md:h-[10vh] flex md:flex-row md:justify-between  fixed top-0 bg-primary_text_color md:bg-green-200 text-white text-primary_text_color px-10 py-2 z-10",
+        "  md:w-full  md:h-[10vh] flex md:flex-row md:justify-between  fixed top-0 bg-primary_text_color md:bg-green-200 text-white text-primary_text_color px-10 py-2 z-10",
         {
-          "h-full w-[60vw] flex-col ": navbarOpen,
-          "h-40 w-full flex-row justify-between ": !navbarOpen,
+          "max-md:h-full w-[60vw] flex-col ": navbarOpen,
+          " h-[7vh] w-full flex-row justify-between ": !navbarOpen,
         }
       )}
     >
       <div className="my-auto  hidden md:block">
         <h2>W.K</h2>
       </div>
-      <div className=" md:hidden">
+      <div
+        className={clsx(" text-2xl text-primary_text_color   md:hidden", {
+          "my-auto ": !navbarOpen,
+          "flex flex-row justify-end h-[10vh] ": navbarOpen,
+        })}
+      >
         <button
-          className="text-white"
+          className="text-white  "
           onClick={() => setNavbarOpen(!navbarOpen)}
         >
-          {navbarOpen ? "Close" : "Open"}
+          {navbarOpen ? <RiMenuFoldFill /> : <IoMdMenu />}
         </button>
       </div>
       <div
