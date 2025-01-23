@@ -1,44 +1,89 @@
 "use client";
 
-import Image from "next/image";
+import RightLayout from "./local_components/right_layout";
+
+import { ChevronDown } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center  h-[90vh]  ">
-      <div className="  flex flex-row justify-center">
-        <div className="flex flex-col md:flex-row gap-10 justify-center mx-5">
-          <div className="flex  flex-col gap-10 md:w-2/5  my-auto ">
-            <div className="flex flex-col gap-4 justify-center ">
-              <div className="flex flex-row  justify-center">
-                <h1>Software Engineer</h1>
+    <>
+      <section className="flex flex-col justify-center  min-h-[100vh]  ">
+        <div className="  flex flex-row justify-center">
+          <div className="flex flex-col md:flex-row gap-20 justify-center mx-5">
+            <div className="flex  flex-col gap-10 md:w-2/5  my-auto ">
+              <div className="flex flex-col gap-4 justify-center ">
+                <div className="flex flex-row  justify-start">
+                  <h1> 👋 Hi, I am</h1>
+                </div>
+                <div className="flex flex-row  justify-center">
+                  <h1>Waleed Khalid Kayani</h1>
+                </div>
               </div>
-              <div className="flex flex-row  justify-center">
-                <h1>Waleed Khalid Kayani</h1>
+              <div>
+                <p className="text-primary_text_color">
+                  I am a software engineer with a passion for building software
+                  that solves real-world problems. I am a full-stack developer
+                  with experience in building applications using React, FAST
+                  API, and AWS.
+                </p>
+              </div>
+              <div>
+                <button className="bg-primary_text_color text-white rounded-lg py-2 px-8 ">
+                  Contact Me
+                </button>
               </div>
             </div>
-            <div>
-              <p className="text-primary_text_color">
-                I am a software engineer with a passion for building software
-                that solves real-world problems. I am a full-stack developer
-                with experience in building web applications using React, Node,
-                and Express. I am also experienced in building mobile
-                applications using React Native.
-              </p>
-            </div>
-          </div>
 
-          <div className="">
-            <Image
-              src="sample_img.png"
-              alt="Next.js logo"
-              width={600}
-              height={500}
-              priority
-            />
+            <div className="">
+              <RightLayout />
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+        <div className="h-[10%]">
+          <div className="flex flex-row left-1/2 transform -translate-x-1/2 animate-bounce justify-center gap-5 absolute bottom-0 ">
+            <ChevronDown size={24} />
+          </div>
+        </div>
+      </section>
+      {/* <section className="flex flex-col justify-center  min-h-[100vh] bg-primary_text_color text-white ">
+        <div className="  flex flex-row justify-center">
+          <div className="flex flex-col md:flex-row gap-20 justify-center mx-5">
+            <div className="flex  flex-col gap-10 md:w-2/5  my-auto ">
+              <div className="flex flex-col gap-4 justify-center ">
+                <div className="flex flex-row  justify-start">
+                  <h1 className="text-green-100"> 👋 Hi, I am</h1>
+                </div>
+                <div className="flex flex-row  justify-center">
+                  <h1>Waleed Khalid Kayani</h1>
+                </div>
+              </div>
+              <div>
+                <p className="text-primary_text_color">
+                  I am a software engineer with a passion for building software
+                  that solves real-world problems. I am a full-stack developer
+                  with experience in building applications using React, FAST
+                  API, and AWS.
+                </p>
+              </div>
+              <div>
+                <button className="bg-primary_text_color text-white rounded-lg py-2 px-8 ">
+                  Contact Me
+                </button>
+              </div>
+            </div>
+
+            <div className="">
+              <RightLayout />
+            </div>
+          </div>
+        </div>
+        <div className="h-[10%]">
+          <div className="flex flex-row left-1/2 transform -translate-x-1/2 animate-bounce justify-center gap-5 absolute bottom-0 ">
+            <ChevronDown size={24} />
+          </div>
+        </div>
+      </section> */}
+    </>
   );
 
   // return (
