@@ -10,7 +10,8 @@
   /* --text-color: #a10606;
   --text-color-light: #a106069d; */
 
-  --accent-color: #bbf7d0;
+  /* --accent-color: #bbf7d0; */
+  --accent-color: #beb41d;
   --primary-text-color: #3a4e41;
 }
 @media (prefers-color-scheme: dark) {

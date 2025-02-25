@@ -46,7 +46,7 @@ export default function Navbar() {
       >
         <ul className="my-auto  flex flex-col  md:flex-row list-none gap-10  text-green-200 md:text-primary_text_color  ">
           <li
-            className="hover:cursor-pointer"
+            className="hover:cursor-pointer hover:text-yellow-400"
             onClick={() => {
               setNavbarOpen(false);
               router.push("/home");
@@ -55,14 +55,13 @@ export default function Navbar() {
             Home
           </li>
           <li
-            className="hover:cursor-pointer"
+            className="hover:cursor-pointer hover:text-yellow-400"
             onClick={() => router.push("/resume")}
           >
             Resume
           </li>
 
           <li>Project Portfolio</li>
-          <li>Magic Moments</li>
         </ul>
       </div>
       <div className="my-auto hidden md:block">
