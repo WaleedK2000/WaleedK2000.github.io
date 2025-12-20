@@ -12,7 +12,9 @@
 
   /* --accent-color: #bbf7d0; */
   --accent-color: #beb41d;
-  --primary-text-color: #3a4e41;
+  /* --primary-text-color: #3a4e41; */
+
+ --primary-text-color: #d0e8ca
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -35,7 +37,7 @@ body {
   padding: 1rem;
   margin: 1rem;
   border-radius: 0.5rem;
-  background: var(--foreground-transparent);
+  /* background: var(--foreground-transparent); */
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 
@@ -52,5 +54,5 @@ h3 {
 }
 
 p {
-  @apply text-base text-[var(--primary-text-color)];
+  @apply text-lg text-justify text-[var(--primary-text-color)];
 }

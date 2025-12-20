@@ -12,6 +12,8 @@ import { TbBrandCpp } from "react-icons/tb";
 import { FaDocker } from "react-icons/fa6";
 import { SiGooglegemini } from "react-icons/si";
 import { SiVite } from "react-icons/si";
+import { motion } from "framer-motion";
+
 
 export default function RightLayout() {
   const items = [
@@ -65,16 +67,41 @@ export default function RightLayout() {
     },
   ];
 
+  const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariant = {
+  hidden: { opacity: 0, scale: 0.8 },
+  show: { opacity: 1, scale: 1 },
+};
+
+
+
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <motion.div
+      className="grid grid-cols-4 gap-4"
+      variants={container}
+      initial="hidden"
+      animate="show"
+    >
       {items.map((item) => (
-        <div
+        <motion.div
           key={item.title}
-          className="w-20 h-20 border-primary_text_color border-2 rounded-lg items-center justify-center flex text-4xl text-primary_text_color "
+          variants={itemVariant}
+          whileHover={{ scale: 1.1 }}
+          className="w-20 h-20 border-primary_text_color border-2 rounded-lg flex items-center justify-center text-4xl text-primary_text_color"
         >
           {item.file}
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
+
 }
