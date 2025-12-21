@@ -36,7 +36,7 @@ export default function Home() {
 
 
       </section>
-      <section className=" snap-start bg-[#d0e8ca] flex flex-col pt-24 h-[80vh] px-52 gap-10" >
+      <section className=" snap-start bg-[#d0e8ca] flex flex-col pt-24 h-[80vh] px-64 gap-10" >
         <h1 className="text-[#12240f]" >About</h1>
         <p className="text-[#12240f]">
           My name is Waleed Kayani. I'm a full-stack software engineer with a strong focus on backend systems, cloud infrastructure, and scalable web applications. I work primarily with Python, FastAPI, AWS, and modern DevOps tooling, and I enjoy building systems that are reliable, secure, and easy to maintain.
@@ -48,7 +48,7 @@ export default function Home() {
         </p>
 
       </section>
-      <section className=" snap-start bg-[#d0e8ca] flex flex-col pt-24 h-[80vh] px-52 gap-10" >
+      <section className=" snap-start bg-[#d0e8ca] flex flex-col pt-24 h-[80vh] px-64 gap-10" >
         <h1 className="text-[#12240f]" >Expierence</h1>
       <Experience />
        

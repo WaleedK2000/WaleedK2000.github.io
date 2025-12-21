@@ -14,7 +14,7 @@
   --accent-color: #beb41d;
   /* --primary-text-color: #3a4e41; */
 
- --primary-text-color: #d0e8ca
+ --primary-text-color: #d0e8ca;
 }
 @media (prefers-color-scheme: dark) {
   :root {
