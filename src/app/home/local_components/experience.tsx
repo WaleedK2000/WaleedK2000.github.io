@@ -6,7 +6,7 @@ function ExperienceButton({ company, role, isActive, onClick }) {
   return (
     <button
       onClick={onClick}
-      className={`flex flex-col justify-center pl-3 border-l-4 border-b-4 w-72 text-left transition-all
+      className={`flex flex-col justify-center py-4 pl-3  border-b-4 w-72 text-left transition-all
         ${
           isActive
             ? "border-[#12240f] bg-[#12240f]/5"
@@ -43,9 +43,9 @@ export default function Experience() {
   const activeExperience = experiences[activeIndex];
 
   return (
-    <main className="flex flex-row gap-10 text-[#12240f]">
+    <main className="flex flex-row  text-[#12240f] gap-10">
       {/* Left: Buttons */}
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col border-[#12240f] border-l-4">
         {experiences.map((exp, index) => (
           <ExperienceButton
             key={index}
