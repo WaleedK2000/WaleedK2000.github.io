@@ -5,11 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function ExperienceButton({ company, role, isActive, onClick }) {
   return (
-    <div className={`border-b-4 ${
-          isActive
-          ? "border-[#12240f] bg-[#12240f]/5"
-          : "border-b-transparent border-[#12240f] opacity-70 hover:opacity-100"
-        }`}>
+    <div className="relative">
       <motion.button
         onClick={onClick}
         whileHover={{ x: 4 }}
@@ -17,10 +13,17 @@ function ExperienceButton({ company, role, isActive, onClick }) {
         className="flex flex-col justify-center py-4 pl-3 w-full md:w-72 text-left"
       >
         <p className="font-semibold text-lg text-[#12240f]">{company}</p>
-        {role && (
-          <p className="text-sm opacity-80 text-[#12240f]">{role}</p>
-        )}
+        {role && <p className="text-sm opacity-80 text-[#12240f]">{role}</p>}
       </motion.button>
+      {isActive && (
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          exit={{ scaleX: 0 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="absolute bottom-0 left-0 right-0 h-1 bg-[#12240f] origin-left"
+        />
+      )}
     </div>
   );
 }
@@ -28,11 +31,7 @@ function ExperienceButton({ company, role, isActive, onClick }) {
 function MobileAccordionItem({ experience, isActive, onClick }) {
   return (
     <div className="border-l-4 border-[#12240f]">
-      <div className={` ${
-            isActive
-            ? " bg-[#12240f]/5"
-            : " opacity-70"
-          }`}>
+      <div className={` ${isActive ? " bg-[#12240f]/5" : " opacity-70"}`}>
         <motion.button
           onClick={onClick}
           whileHover={{ x: 4 }}
@@ -40,8 +39,12 @@ function MobileAccordionItem({ experience, isActive, onClick }) {
           className="flex justify-between items-start py-4 pl-3 pr-4 w-full text-left"
         >
           <div>
-            <p className="font-semibold text-lg text-[#12240f]">{experience.company}</p>
-            <p className="text-sm opacity-80 text-[#12240f]">{experience.role}</p>
+            <p className="font-semibold text-lg text-[#12240f]">
+              {experience.company}
+            </p>
+            <p className="text-sm opacity-80 text-[#12240f]">
+              {experience.role}
+            </p>
           </div>
           <motion.div
             animate={{ rotate: isActive ? 180 : 0 }}
@@ -64,7 +67,7 @@ function MobileAccordionItem({ experience, isActive, onClick }) {
           </motion.div>
         </motion.button>
       </div>
-      
+
       <AnimatePresence>
         {isActive && (
           <motion.div
