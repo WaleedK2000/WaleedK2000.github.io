@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -49,8 +49,15 @@ export default function Experience() {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(4);
+  const [activeIndex, setActiveIndex] = useState(-1);
   const activeExperience = experiences[activeIndex];
+
+  const onClickExpierence = (index: number) => {
+    if (activeIndex == index )
+      setActiveIndex (-1);
+    else
+    setActiveIndex(index)
+  }
 
   return (
     <main className="flex flex-row  text-[#12240f] gap-10">
@@ -62,7 +69,7 @@ export default function Experience() {
             company={exp.company}
             role={exp.role}
             isActive={activeIndex == index}
-            onClick={() => setActiveIndex(index)}
+            onClick={() => onClickExpierence(index)}
           />
         ))}
       </div>
