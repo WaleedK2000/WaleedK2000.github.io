@@ -14,7 +14,7 @@
   --accent-color: #beb41d;
   /* --primary-text-color: #3a4e41; */
 
- --primary-text-color: #d0e8ca;
+  --primary-text-color: #d0e8ca;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -55,4 +55,8 @@ h3 {
 
 p {
   @apply text-lg text-justify text-[var(--primary-text-color)];
+}
+
+.main-margin {
+  @apply px-5 md:px-8 lg:px-32;
 }

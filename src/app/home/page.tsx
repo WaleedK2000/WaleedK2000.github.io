@@ -32,7 +32,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className=" snap-start bg-[#d0e8ca] flex flex-col pt-24 h-full  md:h-[80vh]  px-5 md:px-32 lg:px-64 gap-10">
+      <section className=" snap-start bg-[#d0e8ca] flex flex-col pt-24 h-full  md:h-[80vh]  main-margin gap-10">
         <h1 className="text-[#12240f]">About</h1>
         <p className="text-[#12240f] text-sm">
           My name is Waleed Kayani. I'm a full-stack software engineer with a
@@ -59,12 +59,12 @@ export default function Home() {
           engineering decisions create real impact.
         </p>
       </section>
-      <section className=" snap-start bg-[#d0e8ca] flex flex-col pt-24 h-full md:h-[80vh]  px-5 md:px-32 lg:px-64 gap-10">
+      <section className=" snap-start bg-[#d0e8ca] flex flex-col pt-24 h-full md:h-[80vh]  main-margin gap-10">
         <h1 className="text-[#12240f]">Expierence</h1>
         <Experience />
       </section>
 
-      <section className=" snap-start bg-[#d0e8ca] flex flex-col pt-24 h-full md:h-[80vh]  px-5 md:px-32 lg:px-64 gap-10">
+      <section className=" snap-start bg-[#d0e8ca] flex flex-col pt-24 h-full md:h-[80vh]  main-margin gap-10">
         <h1 className="text-[#12240f]">Education</h1>
         <Education />
       </section>

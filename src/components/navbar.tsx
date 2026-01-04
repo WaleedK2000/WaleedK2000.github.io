@@ -23,7 +23,7 @@ export default function Navbar() {
         }
       )}
     >
-      <div className="my-auto  hidden md:block">
+      {/* <div className="my-auto  hidden md:block">
         <h2>W.K</h2>
       </div>
       <div
@@ -66,7 +66,7 @@ export default function Navbar() {
       </div>
       <div className="my-auto hidden md:block">
         <button className="bg-green-200">Dark Mode</button>
-      </div>
+      </div> */}
     </nav>
   );
 }
