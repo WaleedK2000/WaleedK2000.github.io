@@ -16,14 +16,14 @@ export default function Navbar() {
   return (
     <nav
       className={clsx(
-        "  md:w-full  md:h-[10vh] flex md:flex-row md:justify-between  fixed top-0 bg-primary_text_color md:bg-green-200 text-white text-primary_text_color px-10 py-2 z-10",
+        "  md:w-full  md:h-[10vh] flex md:flex-row md:justify-between  fixed top-0   text-white text-primary_text_color px-10 py-2 z-10",
         {
           "max-md:h-full w-[60vw] flex-col ": navbarOpen,
           " h-[7vh] w-full flex-row justify-between ": !navbarOpen,
         }
       )}
     >
-      <div className="my-auto  hidden md:block">
+      {/* <div className="my-auto  hidden md:block">
         <h2>W.K</h2>
       </div>
       <div
@@ -66,7 +66,7 @@ export default function Navbar() {
       </div>
       <div className="my-auto hidden md:block">
         <button className="bg-green-200">Dark Mode</button>
-      </div>
+      </div> */}
     </nav>
   );
 }
