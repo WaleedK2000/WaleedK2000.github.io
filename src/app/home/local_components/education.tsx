@@ -3,7 +3,17 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-function EducationCard({ education, index }) {
+interface Education {
+  degree: string;
+  institution: string;
+  duration: string;
+  gpa?: string;
+  description?: string;
+  highlights?: string[];
+  courses?: string[];
+}
+
+function EducationCard({ education, index }: { education: Education; index: number }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (

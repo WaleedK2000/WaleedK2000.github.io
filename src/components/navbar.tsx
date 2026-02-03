@@ -1,28 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
-
-import clsx from "clsx";
-import { useRouter } from "next/navigation";
-
-import { IoMdMenu } from "react-icons/io";
-import { RiMenuFoldFill } from "react-icons/ri";
+import React from "react";
 
 export default function Navbar() {
-  const router = useRouter();
-
-  const [navbarOpen, setNavbarOpen] = useState(false);
-
   return (
-    <nav
-      className={clsx(
-        "  md:w-full  md:h-[10vh] flex md:flex-row md:justify-between  fixed top-0   text-white text-primary_text_color px-10 py-2 z-10",
-        {
-          "max-md:h-full w-[60vw] flex-col ": navbarOpen,
-          " h-[7vh] w-full flex-row justify-between ": !navbarOpen,
-        }
-      )}
-    >
+    <nav className="md:w-full md:h-[10vh] flex md:flex-row md:justify-between fixed top-0 text-white text-primary_text_color px-10 py-2 z-10">
       {/* <div className="my-auto  hidden md:block">
         <h2>W.K</h2>
       </div>

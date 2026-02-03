@@ -3,7 +3,27 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-function ExperienceButton({ company, role, isActive, onClick }) {
+interface Experience {
+  company: string;
+  role: string;
+  duration: string;
+  description: string;
+}
+
+interface ExperienceButtonProps {
+  company: string;
+  role: string;
+  isActive: boolean;
+  onClick: () => void;
+}
+
+interface MobileAccordionItemProps {
+  experience: Experience;
+  isActive: boolean;
+  onClick: () => void;
+}
+
+function ExperienceButton({ company, role, isActive, onClick }: ExperienceButtonProps) {
   return (
     <div className="relative">
       <motion.button
@@ -28,7 +48,7 @@ function ExperienceButton({ company, role, isActive, onClick }) {
   );
 }
 
-function MobileAccordionItem({ experience, isActive, onClick }) {
+function MobileAccordionItem({ experience, isActive, onClick }: MobileAccordionItemProps) {
   return (
     <div className="border-l-4 border-[#12240f]">
       <div className={` ${isActive ? " bg-[#12240f]/5" : " opacity-70"}`}>
@@ -113,7 +133,7 @@ export default function Experience() {
   const [activeIndex, setActiveIndex] = useState(-1);
   const activeExperience = experiences[activeIndex];
 
-  const onClickExperience = (index) => {
+  const onClickExperience = (index: number) => {
     if (activeIndex === index) setActiveIndex(-1);
     else setActiveIndex(index);
   };
