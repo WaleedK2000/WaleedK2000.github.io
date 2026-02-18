@@ -11,6 +11,7 @@ interface Education {
   description?: string;
   highlights?: string[];
   courses?: string[];
+  honors?: string[];
 }
 
 function EducationCard({ education, index }: { education: Education; index: number }) {
@@ -145,6 +146,30 @@ function EducationCard({ education, index }: { education: Education; index: numb
                       ))}
                     </div>
                   )}
+
+                  {education.honors && education.honors.length > 0 && (
+                    <div className="mt-3 space-y-2">
+                      <p className="text-xs font-semibold text-[#12240f]/70 uppercase tracking-wide">
+                        Honors & Awards
+                      </p>
+                      <ul className="space-y-1.5">
+                        {education.honors.map((honor, i) => (
+                          <motion.li
+                            key={i}
+                            initial={{ opacity: 0, x: -10 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: i * 0.1 }}
+                            className="text-sm text-[#12240f]/80 flex items-start gap-2"
+                          >
+                            <span className="text-[#12240f] mt-1 flex-shrink-0">
+                              •
+                            </span>
+                            <span>{honor}</span>
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             )}
@@ -159,24 +184,15 @@ export default function Education() {
   const educationData = [
     {
       degree: "Bachelor of Science in Computer Science",
-      institution: "FAST NUCES",
-      duration: "2015 – 2019",
-      gpa: "3.2/4.0",
-      description:
-        "Focused on software engineering, cloud computing, and cybersecurity. Final year project involved building a breach and attack simulation tool to test enterprise security postures.",
-      highlights: [
-        "Built breach and attack simulation tool as capstone project",
-        "Deep dive into systems security and penetration testing",
-        "Strong foundation in algorithms, data structures, and software design",
-      ],
-      courses: [
-        "Cloud Computing",
-        "Information Security",
-        "Database Systems",
-        "Software Engineering",
+      institution: "FAST National University of Computing and Emerging Sciences, Islamabad",
+      duration: "2019 – 2023",
+      gpa: "3.43",
+      honors: [
+        "Deans List Spring '21 (Jun 2021)",
+        "Deans List Fall '20 (Feb 2020)",
+        "Deans List Fall '19 (Jan 2019)",
       ],
     },
-    // Add more education entries here if needed
   ];
 
   return (

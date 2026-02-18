@@ -9,6 +9,7 @@ export default function EducationItem({
   start_date,
   end_date,
   grade,
+  honors,
 }: EducationItemInterface) {
   return (
     <div>
@@ -37,7 +38,22 @@ export default function EducationItem({
           </div>
         </div>
       </div>
-      {grade && <div>{grade}</div>}
+      {grade && (
+        <div className="mt-2">
+          <p className="text-lg">{grade}</p>
+        </div>
+      )}
+      {honors && honors.length > 0 && (
+        <div className="mt-4">
+          <ul className="space-y-2 list-disc ml-6">
+            {honors.map((honor, index) => (
+              <li key={index} className="text-lg text-justify">
+                {honor}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

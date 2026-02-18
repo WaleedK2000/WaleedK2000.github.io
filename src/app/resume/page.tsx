@@ -23,7 +23,7 @@ export default function Resume() {
           <h2 className="text-4xl">Waleed Kayani</h2>
         </div>
         <div>
-          <p className="text-white">waleedkayani14@yahoo.com | 03045113595 </p>
+          <p className="text-white">waleedkayani14@yahoo.com | 0304 - 5113595 </p>
         </div>
       </div>
 
