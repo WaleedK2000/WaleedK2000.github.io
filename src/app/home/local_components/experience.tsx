@@ -7,7 +7,7 @@ interface Experience {
   company: string;
   role: string;
   duration: string;
-  description: string;
+  responsibilities: string[];
 }
 
 interface ExperienceButtonProps {
@@ -101,9 +101,11 @@ function MobileAccordionItem({ experience, isActive, onClick }: MobileAccordionI
               <p className="font-semibold text-sm text-[#12240f] mb-2">
                 {experience.duration}
               </p>
-              <p className="text-sm leading-relaxed text-[#12240f]">
-                {experience.description}
-              </p>
+              <ul className="text-sm leading-relaxed text-[#12240f] space-y-2 list-disc ml-4">
+                {experience.responsibilities.map((responsibility, idx) => (
+                  <li key={idx}>{responsibility}</li>
+                ))}
+              </ul>
             </div>
           </motion.div>
         )}
@@ -117,16 +119,26 @@ export default function Experience() {
     {
       company: "Codeaza Technologies",
       role: "Full Stack Engineer",
-      duration: "Jan 2022 – Apr 2024",
-      description:
-        "Developed full-stack solutions using React, FastAPI, and cloud services. Led feature design, API development, and deployment workflows while ensuring scalability and security.",
+      duration: "May 2024 – Current",
+      responsibilities: [
+        "Designed and developed scalable, production-grade RESTful backend APIs using FastAPI and Python, implementing secure authentication, RBAC, and third-party integrations.",
+        "Built responsive and modular frontend interfaces using Vue.js, React js, and modern JavaScript practices, ensuring high performance, maintainability, and seamless integration with backend APIs.",
+        "Integrated Sentry for real-time error tracking and performance monitoring, improving visibility into production issues.",
+        "Implemented centralized logging, alerting, and uptime monitoring using BetterStack to enhance system observability and reliability.",
+        "Optimized application responsiveness and load times through efficient API design, frontend state management, and performance-focused UI updates, ensuring smooth user experience across devices.",
+        "Implemented CI/CD pipelines with GitHub Actions, enabling automated testing, deployments, and reducing developer load by 30%.",
+      ],
     },
     {
       company: "Prismware Technologies",
-      role: "Associate Software Engineer",
-      duration: "May 2019 – Present",
-      description:
-        "Worked on building and maintaining scalable web applications, collaborating closely with cross-functional teams. Responsibilities included feature development, performance optimization, and improving overall user experience using modern frontend and backend technologies.",
+      role: "Software Engineer",
+      duration: "Sep 2023 – Mar 2024",
+      responsibilities: [
+        "Collaborated with designers, backend engineers, and product stakeholders to translate customer requirements into scalable and user-friendly frontend solutions.",
+        "Developed high-quality, reusable, and testable React components, following modern JavaScript patterns to improve maintainability and reduce code duplication.",
+        "Designed mobile-first, responsive layouts using modern CSS and component-based architecture, delivering consistent UX across desktop, tablet, and mobile screens",
+        "Optimized frontend performance and user interactions by applying best practices in state management, component rendering, and API integration.",
+      ],
     },
   ];
 
@@ -182,9 +194,11 @@ export default function Experience() {
                 <p className="font-semibold text-sm text-[#12240f]">
                   {activeExperience.duration}
                 </p>
-                <p className="text-sm leading-relaxed text-[#12240f]">
-                  {activeExperience.description}
-                </p>
+                <ul className="text-sm leading-relaxed text-[#12240f] space-y-2 list-disc ml-4">
+                  {activeExperience.responsibilities.map((responsibility, idx) => (
+                    <li key={idx}>{responsibility}</li>
+                  ))}
+                </ul>
               </motion.div>
             </AnimatePresence>
           )}

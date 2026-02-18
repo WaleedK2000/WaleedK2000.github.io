@@ -5,6 +5,7 @@ import RightLayout from "./local_components/right_layout";
 import ProfileLinks from "./local_components/profile_links";
 import Experience from "./local_components/experience";
 import Education from "./local_components/education";
+import Portfolio from "./local_components/portfolio";
 
 export default function Home() {
   return (
@@ -35,28 +36,11 @@ export default function Home() {
       <section className=" snap-start bg-[#d0e8ca] flex flex-col pt-24 h-full  md:h-[80vh]  main-margin gap-10">
         <h1 className="text-[#12240f]">About</h1>
         <p className="text-[#12240f] text-sm">
-          My name is Waleed Kayani. I&apos;m a full-stack software engineer with a
-          strong focus on backend systems, cloud infrastructure, and scalable
-          web applications. I work primarily with Python, FastAPI, AWS, and
-          modern DevOps tooling, and I enjoy building systems that are reliable,
-          secure, and easy to maintain. My day-to-day work involves designing
-          APIs, deploying cloud-native services, and migrating systems from
-          monolithic setups to containerized, production-ready architectures.
-          Alongside backend engineering, I also deliver full-stack solutions
-          using React—bridging solid backend logic with clean, usable
-          interfaces.
+          Full Stack Engineer with experience in building scalable web applications using Python, FastAPI, and React.js. I am skilled in designing secure, maintainable backend systems and developing modern frontend interfaces.
         </p>
 
         <p className="text-[#12240f] text-sm">
-          I started my journey with a Computer Science degree from FAST NUCES,
-          where my interest in security and systems engineering led me to build
-          a breach and attack simulation tool as my final year project. Since
-          then, I’ve continued to deepen my expertise through hands-on industry
-          experience, working with CI/CD pipelines, Infrastructure as Code, and
-          AI-powered integrations in real-world applications.Whether you’re
-          looking to build a scalable product, modernize existing systems, or
-          collaborate on something meaningful, I enjoy working on problems where
-          engineering decisions create real impact.
+          I have worked on production-grade RESTful APIs, implemented secure authentication and RBAC systems, and integrated third-party services. My experience includes building responsive frontend interfaces using Vue.js and React.js, implementing CI/CD pipelines with GitHub Actions, and leveraging cloud infrastructure on AWS. I am passionate about creating systems that are reliable, performant, and deliver exceptional user experiences.
         </p>
       </section>
       <section className=" snap-start bg-[#d0e8ca] flex flex-col pt-24 h-full md:h-[80vh]  main-margin gap-10">
@@ -67,6 +51,11 @@ export default function Home() {
       <section className=" snap-start bg-[#d0e8ca] flex flex-col pt-24 h-full md:h-[80vh]  main-margin gap-10">
         <h1 className="text-[#12240f]">Education</h1>
         <Education />
+      </section>
+
+      <section className=" snap-start bg-[#d0e8ca] flex flex-col pt-24 min-h-full md:min-h-[80vh] main-margin gap-10 overflow-y-auto">
+        <h1 className="text-[#12240f]">Portfolio</h1>
+        <Portfolio />
       </section>
 
       <section className="h-[20vh] bg-black"></section>
