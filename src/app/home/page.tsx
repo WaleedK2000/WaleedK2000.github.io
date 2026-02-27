@@ -35,12 +35,21 @@ export default function Home() {
       </section>
       <section className=" snap-start bg-[#d0e8ca] flex flex-col pt-24 h-full  md:h-[80vh]  main-margin gap-10">
         <h1 className="text-[#12240f]">About</h1>
-        <p className="text-[#12240f] text-sm">
-          Full Stack Engineer with experience in building scalable web applications using Python, FastAPI, and React.js. I am skilled in designing secure, maintainable backend systems and developing modern frontend interfaces.
+        <p className="text-[#12240f] px-32 ">
+          Full Stack Engineer with experience in building scalable web
+          applications using Python, FastAPI, and React.js. I am skilled in
+          designing secure, maintainable backend systems and developing modern
+          frontend interfaces.
         </p>
 
-        <p className="text-[#12240f] text-sm">
-          I have worked on production-grade RESTful APIs, implemented secure authentication and RBAC systems, and integrated third-party services. My experience includes building responsive frontend interfaces using Vue.js and React.js, implementing CI/CD pipelines with GitHub Actions, and leveraging cloud infrastructure on AWS. I am passionate about creating systems that are reliable, performant, and deliver exceptional user experiences.
+        <p className="text-[#12240f] px-32 ">
+          I have worked on production-grade RESTful APIs, implemented secure
+          authentication and RBAC systems, and integrated third-party services.
+          My experience includes building responsive frontend interfaces using
+          Vue.js and React.js, implementing CI/CD pipelines with GitHub Actions,
+          and leveraging cloud infrastructure on AWS. I am passionate about
+          creating systems that are reliable, performant, and deliver
+          exceptional user experiences.
         </p>
       </section>
       <section className=" snap-start bg-[#d0e8ca] flex flex-col pt-24 h-full md:h-[80vh]  main-margin gap-10">

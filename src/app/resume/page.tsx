@@ -23,17 +23,19 @@ export default function Resume() {
           <h2 className="text-4xl">Waleed Kayani</h2>
         </div>
         <div>
-          <p className="text-white">waleedkayani14@yahoo.com | 0304 - 5113595 </p>
+          <p className="text-white">
+            waleedkayani14@yahoo.com | 0304 - 5113595{" "}
+          </p>
         </div>
       </div>
 
       <div className=" lg:mx-40 mt-10 px-3 ">
         <div className="flex flex-row gap-3">
-          <div className="text-2xl font-semibold text-primary_text_color ">
+          <div className=" font-semibold text-primary_text_color ">
             <HiBuildingOffice2 />
           </div>
           <div>
-            <h3 className="text-2xl font-semibold">Work Experience</h3>
+            <h3 className=" font-semibold">Work Experience</h3>
           </div>
         </div>
         <hr className="border-t-2 border-primary_text_color " />
@@ -50,11 +52,11 @@ export default function Resume() {
 
       <div className=" lg:mx-40 mt-10 px-3 ">
         <div className="flex flex-row gap-3">
-          <div className="text-2xl font-semibold text-primary_text_color">
+          <div className=" font-semibold text-primary_text_color">
             <FaGraduationCap />
           </div>
           <div>
-            <h3 className="text-2xl font-semibold">Education</h3>
+            <h3 className=" font-semibold">Education</h3>
           </div>
         </div>
         <hr className="border-t-2 border-primary_text_color " />
@@ -71,11 +73,11 @@ export default function Resume() {
 
       <div className=" lg:mx-40 mt-10 px-3 ">
         <div className="flex flex-row gap-3">
-          <div className="text-2xl font-semibold text-primary_text_color">
+          <div className=" font-semibold text-primary_text_color">
             <PiPresentationFill />
           </div>
           <div>
-            <h3 className="text-2xl font-semibold">Projects</h3>
+            <h3 className=" font-semibold">Projects</h3>
           </div>
         </div>
         <hr className="border-t-2 border-primary_text_color " />
@@ -90,10 +92,10 @@ export default function Resume() {
       <div className=" lg:mx-40 mt-10 px-3 ">
         <div className="flex flex-row gap-3">
           <div className="">
-            <PiCertificateFill className="text-2xl font-semibold text-primary_text_color" />
+            <PiCertificateFill className=" font-semibold text-primary_text_color" />
           </div>
           <div>
-            <h3 className="text-2xl font-semibold">Certificates</h3>
+            <h3 className=" font-semibold">Certificates</h3>
           </div>
         </div>
         <hr className="border-t-2 border-primary_text_color " />

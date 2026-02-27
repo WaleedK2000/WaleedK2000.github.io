@@ -23,7 +23,12 @@ interface MobileAccordionItemProps {
   onClick: () => void;
 }
 
-function ExperienceButton({ company, role, isActive, onClick }: ExperienceButtonProps) {
+function ExperienceButton({
+  company,
+  role,
+  isActive,
+  onClick,
+}: ExperienceButtonProps) {
   return (
     <div className="relative">
       <motion.button
@@ -32,8 +37,8 @@ function ExperienceButton({ company, role, isActive, onClick }: ExperienceButton
         transition={{ duration: 0.2, ease: "easeOut" }}
         className="flex flex-col justify-center py-4 pl-3 w-full md:w-72 text-left"
       >
-        <p className="font-semibold text-lg text-[#12240f]">{company}</p>
-        {role && <p className="text-sm opacity-80 text-[#12240f]">{role}</p>}
+        <h3 className="text-[#12240f]">{company}</h3>
+        {role && <p className="opacity-80 text-[#12240f]">{role}</p>}
       </motion.button>
       {isActive && (
         <motion.div
@@ -48,7 +53,11 @@ function ExperienceButton({ company, role, isActive, onClick }: ExperienceButton
   );
 }
 
-function MobileAccordionItem({ experience, isActive, onClick }: MobileAccordionItemProps) {
+function MobileAccordionItem({
+  experience,
+  isActive,
+  onClick,
+}: MobileAccordionItemProps) {
   return (
     <div className="border-l-4 border-[#12240f]">
       <div className={` ${isActive ? " bg-[#12240f]/5" : " opacity-70"}`}>
@@ -151,7 +160,7 @@ export default function Experience() {
   };
 
   return (
-    <main className="text-[#12240f]">
+    <main className="text-[#12240f] px-32">
       {/* Mobile Accordion (below md breakpoint) */}
       <div className="md:hidden flex flex-col gap-4">
         {experiences.map((exp, index) => (
@@ -167,7 +176,7 @@ export default function Experience() {
       {/* Desktop Side-by-Side Layout (md and above) */}
       <div className="hidden md:flex md:flex-row gap-10">
         {/* Left: Buttons */}
-        <div className="flex flex-col border-[#12240f] border-l-4">
+        <div className="flex flex-col border-[#12240f] border-l-4 h-min">
           {experiences.map((exp, index) => (
             <ExperienceButton
               key={index}
@@ -180,7 +189,7 @@ export default function Experience() {
         </div>
 
         {/* Right: Details */}
-        <div className="flex flex-col gap-4 max-w-xl relative">
+        <div className="flex flex-col gap-4  relative">
           {activeExperience && (
             <AnimatePresence mode="wait">
               <motion.div
@@ -191,13 +200,15 @@ export default function Experience() {
                 transition={{ duration: 0.3, ease: "easeOut" }}
                 className="flex flex-col gap-4"
               >
-                <p className="font-semibold text-sm text-[#12240f]">
+                <p className="font-semibold text-[#12240f]">
                   {activeExperience.duration}
                 </p>
-                <ul className="text-sm leading-relaxed text-[#12240f] space-y-2 list-disc ml-4">
-                  {activeExperience.responsibilities.map((responsibility, idx) => (
-                    <li key={idx}>{responsibility}</li>
-                  ))}
+                <ul className="leading-relaxed text-[#12240f] space-y-2 list-disc ml-4">
+                  {activeExperience.responsibilities.map(
+                    (responsibility, idx) => (
+                      <li key={idx}>{responsibility}</li>
+                    ),
+                  )}
                 </ul>
               </motion.div>
             </AnimatePresence>
