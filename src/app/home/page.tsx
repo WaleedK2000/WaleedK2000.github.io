@@ -73,7 +73,9 @@ export default function Home() {
 
       <section className=" snap-start bg-[#d0e8ca] flex flex-col pt-24 min-h-full md:min-h-[80vh] main-margin gap-10 overflow-y-auto">
         <h1 className="text-[#12240f]">Portfolio</h1>
-        <Portfolio />
+        <div className="mx-32">
+          <Portfolio />
+        </div>
       </section>
 
       <section className="h-[20vh] bg-black"></section>

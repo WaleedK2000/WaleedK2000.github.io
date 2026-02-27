@@ -28,18 +28,18 @@ function EducationCard({
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: index * 0.2, duration: 0.5 }}
-      className="relative"
+      className="relative px-2 lg:px-32"
     >
       {/* Timeline dot and line */}
 
       {/* Content card */}
       <motion.div
-        className="md:ml-12 mb-8"
+        className=" mb-8"
         whileHover={{ x: 4 }}
         transition={{ duration: 0.2 }}
       >
         <div
-          className="bg-[#d0e8ca]/30 backdrop-blur-sm rounded-lg p-5 cursor-pointer border-2 border-[#d0e8ca]/30 hover:border-[#d0e8ca] transition-colors"
+          className="bg-[#d0e8ca]/30 backdrop-blur-sm rounded-lg py-5 cursor-pointer border-2 border-[#d0e8ca]/30 hover:border-[#d0e8ca] transition-colors"
           onClick={() => setIsExpanded(!isExpanded)}
         >
           {/* Header */}
