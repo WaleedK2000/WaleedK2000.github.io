@@ -12,6 +12,17 @@ export const metadata: Metadata = {
   title: "Waleed Kayani",
   description:
     "This is my personal website where I write about tech and life. I am a software engineer and I love to write about my experiences. I also write about my projects and the things I am working on.",
+  icons: {
+    icon: [
+      { url: "/favicons/favicon.ico" },
+      { url: "/favicons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicons/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicons/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: { url: "/favicons/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+  },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({

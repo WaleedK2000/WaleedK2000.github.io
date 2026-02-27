@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import RightLayout from "./local_components/right_layout";
 
 import ProfileLinks from "./local_components/profile_links";
@@ -10,7 +11,15 @@ import Portfolio from "./local_components/portfolio";
 export default function Home() {
   return (
     <main className="h-screen overflow-y-scroll scroll-smooth snap-y snap-mandatory">
-      <section className="bg-[#12240f]  flex flex-col justify-center h-full md:h-[80vh] snap-start">
+      <section className="bg-[#12240f] relative flex flex-col justify-center h-full md:h-[80vh] snap-start">
+        <div className="absolute top-4 left-4">
+          <Image
+            src="/wk_logo_light.png"
+            alt="WK Logo"
+            width={150}
+            height={150}
+          />
+        </div>
         <div className="  flex flex-row justify-center">
           <div className="flex flex-col md:flex-row gap-20 justify-center mx-5 w-full ">
             <div className="flex  flex-col gap-10 md:w-2/5  my-auto  ">
@@ -19,7 +28,7 @@ export default function Home() {
                   <h1> 👋 Hi, I am</h1>
                 </div>
                 <div className="flex flex-row  justify-center">
-                  <h1>Waleed Khalid Kayani</h1>
+                  <h1>Waleed Kayani</h1>
                 </div>
               </div>
               <div className="flex flex-row justify-center gap-5 ">
