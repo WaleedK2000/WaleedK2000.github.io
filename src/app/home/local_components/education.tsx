@@ -14,7 +14,13 @@ interface Education {
   honors?: string[];
 }
 
-function EducationCard({ education, index }: { education: Education; index: number }) {
+function EducationCard({
+  education,
+  index,
+}: {
+  education: Education;
+  index: number;
+}) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -39,10 +45,8 @@ function EducationCard({ education, index }: { education: Education; index: numb
           {/* Header */}
           <div className="flex justify-between items-start mb-2">
             <div className="flex-1">
-              <h3 className="text-lg font-bold text-[#12240f]">
-                {education.degree}
-              </h3>
-              <p className="text-sm font-medium text-[#12240f]/80">
+              <h3 className="font-bold text-[#12240f]">{education.degree}</h3>
+              <p className="font-medium text-[#12240f]/80">
                 {education.institution}
               </p>
             </div>
@@ -68,7 +72,7 @@ function EducationCard({ education, index }: { education: Education; index: numb
           </div>
 
           {/* Duration and GPA */}
-          <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-[#12240f]/70 mb-2">
+          <div className="flex flex-wrap gap-x-4 gap-y-1 text-[#12240f]/70 mb-2">
             <span className="flex items-center gap-1">
               <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                 <path
@@ -112,7 +116,7 @@ function EducationCard({ education, index }: { education: Education; index: numb
 
                   {education.highlights && education.highlights.length > 0 && (
                     <div className="space-y-2">
-                      <p className="text-xs font-semibold text-[#12240f]/70 uppercase tracking-wide">
+                      <p className="font-semibold text-[#12240f]/70 uppercase tracking-wide">
                         Highlights
                       </p>
                       <ul className="space-y-1.5">
@@ -122,7 +126,7 @@ function EducationCard({ education, index }: { education: Education; index: numb
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: i * 0.1 }}
-                            className="text-sm text-[#12240f]/80 flex items-start gap-2"
+                            className="text-[#12240f]/80 flex items-start gap-2"
                           >
                             <span className="text-[#12240f] mt-1 flex-shrink-0">
                               •
@@ -139,7 +143,7 @@ function EducationCard({ education, index }: { education: Education; index: numb
                       {education.courses.map((course, i) => (
                         <span
                           key={i}
-                          className="text-xs px-2 py-1 bg-[#d0e8ca]/20 text-[#12240f] rounded-full"
+                          className="px-2 py-1 bg-[#d0e8ca]/20 text-[#12240f] rounded-full"
                         >
                           {course}
                         </span>
@@ -149,7 +153,7 @@ function EducationCard({ education, index }: { education: Education; index: numb
 
                   {education.honors && education.honors.length > 0 && (
                     <div className="mt-3 space-y-2">
-                      <p className="text-xs font-semibold text-[#12240f]/70 uppercase tracking-wide">
+                      <p className="font-semibold text-[#12240f]/70 uppercase tracking-wide">
                         Honors & Awards
                       </p>
                       <ul className="space-y-1.5">
@@ -159,7 +163,7 @@ function EducationCard({ education, index }: { education: Education; index: numb
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: i * 0.1 }}
-                            className="text-sm text-[#12240f]/80 flex items-start gap-2"
+                            className="text-[#12240f]/80 flex items-start gap-2"
                           >
                             <span className="text-[#12240f] mt-1 flex-shrink-0">
                               •
@@ -184,7 +188,8 @@ export default function Education() {
   const educationData = [
     {
       degree: "Bachelor of Science in Computer Science",
-      institution: "FAST National University of Computing and Emerging Sciences, Islamabad",
+      institution:
+        "FAST National University of Computing and Emerging Sciences, Islamabad",
       duration: "2019 – 2023",
       gpa: "3.43",
       honors: [
