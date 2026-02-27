@@ -160,7 +160,7 @@ export default function Experience() {
   };
 
   return (
-    <main className="text-[#12240f] px-32">
+    <main className="text-[#12240f] px-2 lg:px-32">
       {/* Mobile Accordion (below md breakpoint) */}
       <div className="md:hidden flex flex-col gap-4">
         {experiences.map((exp, index) => (
